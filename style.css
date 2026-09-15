@@ -1,0 +1,17 @@
+:root {
+  --primary: #6366f1;
+
+  --color-body-background: #ffffff;
+  --color-body-text: #565973;
+  --color-heading-text: #0b0f19;
+}
+
+body {
+  background-color: var(--color-body-background);
+  color: var(--color-body-text);
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Manrope", sans-serif;
+  line-height: 1.5;
+}
