@@ -1,0 +1,5 @@
+*.svg text auto eol=crlf
+
+*.html text auto eol=crlf
+*.css text auto eol=crlf
+*.js text auto eol=crlf
