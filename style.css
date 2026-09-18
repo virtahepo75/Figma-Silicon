@@ -1,3 +1,5 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"); */
+
 :root {
   --primary: #6366f1;
 
@@ -39,7 +41,6 @@ select {
   font: inherit;
 }
 
-
 body {
   background-color: var(--color-body-background);
   color: var(--color-body-text);
@@ -59,10 +60,8 @@ h6 {
   color: var(--color-heading-text);
 }
 
-
-
 .container {
-  width: 100%;
+  max-width: 1320px;
   margin-inline: auto;
   padding-inline: 1rem;
 }
@@ -92,3 +91,116 @@ h6 {
     max-width: 1320px;
   }
 }
+
+.testimonials {
+  background-color: #f3f6ff;
+  padding-block: 5rem;
+}
+
+@media (min-width: 768px) {
+  .testimonials {
+    padding-bottom: 0;
+  }
+}
+
+.testimonials-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  /* height: 542px; */
+  /* text-align: center; */
+
+  @media (min-width: 768px) {
+    .testimonials-area {
+      text-align: left;
+    }
+  }
+}
+.testimonials-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+}
+.title {
+  color: var(--color-heading-text);
+  /* font-family: "Manrope", sans-serif; */
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+@media (min-width: 768px) {
+  .title {
+    justify-content: start;
+  }
+}
+
+.review {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  padding: 48px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  position: relative;
+  flex: 0 0 calc(50% - 1rem);
+
+  @media (min-width: 768px) {
+    .review {
+      justify-content: start;
+    }
+  }
+
+  .review-card {
+    background-color: var(--color-body-background);
+    border-radius: 8px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    width: 100%;
+    position: relative;
+
+    .text {
+      color: var(--color-body-text);
+      font-size: 18px;
+      line-height: 1.6em;
+    }
+
+    .quotes {
+      width: 60px;
+      height: 60px;
+      position: relative;
+    }
+
+    .author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .name {
+      color: #0b0f19;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .position {
+      color: #9397ad;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+}
+
+/* footer {
+   font-family: "Manrope", sans-serif;
+  background-color: var(--background-color);
+  color: #9397ad;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+} */
