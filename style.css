@@ -94,7 +94,6 @@ h6 {
 
 .testimonials {
   background-color: #f3f6ff;
-  padding-block: 5rem;
 }
 
 @media (min-width: 768px) {
@@ -106,8 +105,9 @@ h6 {
 .testimonials-area {
   display: flex;
   flex-wrap: wrap;
-  gap: 3rem;
-  /* height: 542px; */
+  max-height: 542px;
+  padding: 3rem;
+
   /* text-align: center; */
 
   @media (min-width: 768px) {
@@ -127,6 +127,9 @@ h6 {
   /* font-family: "Manrope", sans-serif; */
   font-size: 2.5rem;
   font-weight: 800;
+  max-width: 306px;
+  min-width: 306px;
+  margin-right: 3rem;
 }
 @media (min-width: 768px) {
   .title {
@@ -137,13 +140,13 @@ h6 {
 .review {
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
-  padding: 48px 24px 24px;
+  /* padding: 20px 24px 24px; */
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   gap: 24px;
   position: relative;
-  flex: 0 0 calc(50% - 1rem);
+  /* flex: 0 0 calc(50% - 1rem); */
 
   @media (min-width: 768px) {
     .review {
@@ -164,7 +167,7 @@ h6 {
 
     .text {
       color: var(--color-body-text);
-      font-size: 18px;
+      font-size: large;
       line-height: 1.6em;
     }
 
@@ -175,22 +178,44 @@ h6 {
       top: -20px;
     }
 
-    .author {
+    .star-rating {
+      height: 16px;
+      height: 16px;
+      color: #ffba08;
       display: flex;
-      align-items: center;
-      gap: 12px;
+      flex-direction: row;
+      /* margin: 36px; */
     }
 
+    .author {
+      /* border-radius: 4px; */
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    /* .info {
+    } */
+
     .name {
-      color: #0b0f19;
+      color: var(--color-heading-text);
       font-size: 16px;
       font-weight: 700;
+      text-align: left;
+      width: 194px;
+      height: 26px;
+      position: relative;
     }
 
     .position {
       color: #9397ad;
       font-size: 14px;
       font-weight: 400;
+      text-align: left;
+      width: 194px;
+      height: 22px;
+      position: relative;
     }
   }
 }
