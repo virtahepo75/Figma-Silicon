@@ -386,3 +386,26 @@ header {
     position: relative;
   }
 }
+
+.footer {
+  font-family: "Manrope", sans-serif;
+  background-color: var(--background-color);
+  padding: 0;
+  height: 130px;
+  position: relative;
+
+  @media (width >= 768px) {
+    padding-bottom: 0;
+  }
+
+  .text {
+    color: #9397ad;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    top: 54px;
+    position: relative;
+    height: 27px;
+  }
+}
