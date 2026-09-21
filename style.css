@@ -8,6 +8,10 @@
   --color-button-text: #ffffff;
   --color-button-background: var(--primary);
   --color-button-hover-background: #0b0f19;
+
+  --color-button-download-text: #ffffff;
+  --color-button-download-background: #0b0f19;
+  --color-button-download-hover-background: #0b0f19;
 }
 
 /* 1. Use a more-intuitive box-sizing model */
@@ -81,7 +85,17 @@ button,
   &:hover {
     background-color: var(--color-button-hover-background);
   }
+
+  img {
+    height: 100%;
+    width: auto;
+  }
 }
+
+/* img {
+  height: auto;
+  width: 100%;
+} */
 
 .container {
   width: 100%;
@@ -123,7 +137,47 @@ button,
     display: block;
   }
 }
-/* knappen försvinner på små skärm*/
+
+.btn-download {
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+
+  .btn-area {
+    padding: 10px 20px;
+    display: grid;
+    column-gap: 1rem;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "icon text"
+      "icon store";
+
+    background-color: var(--color-button-download-background);
+    color: var(--color-button-download-text);
+    text-decoration: none;
+    font-size: 0.8rem;
+
+    .download-app-text {
+      grid-area: text;
+      font-weight: 600;
+      font-size: 0.9em;
+      text-align: left;
+    }
+    .download-app-icon {
+      grid-area: icon;
+      height: 100%;
+    }
+    .download-app-store {
+      grid-area: store;
+      font-size: 1.5em;
+      font-weight: 600;
+      text-align: left;
+    }
+  }
+}
+
 .darkmode {
   display: none;
 
@@ -144,6 +198,70 @@ header {
       justify-content: space-between;
       align-items: center;
       gap: 2rem;
+    }
+  }
+}
+
+.hero {
+  background: #ffffff;
+  background: linear-gradient(
+    178deg,
+    rgba(255, 255, 255, 0.07) 0%,
+    rgba(218, 70, 239, 0.05) 42%,
+    rgba(99, 102, 241, 0.07) 83%
+  );
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  @media (width >= 768px) {
+    padding-bottom: 0;
+  }
+
+  .hero-area {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+
+    @media (width >= 768px) {
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      text-align: left;
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .hero-title {
+        font-size: 56px;
+        font-weight: 800;
+      }
+      .hero-ingress {
+        font-size: 18px;
+        font-weight: 400;
+      }
+      .app-download-buttons {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: 210px 210px;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        @media (width >= 768) {
+          justify-content: start;
+        }
+      }
+    }
+
+    .hero-image {
+      /* display: none; */
+
+      @media (width >= 768) {
+        display: block;
+      }
     }
   }
 }
